@@ -2,6 +2,8 @@
 
 Static homepage for Lempoy Labs.
 
+Production domain: <https://lempoylabs.com/>
+
 ## Local preview
 
 Run a simple static server from this folder, for example:
@@ -21,4 +23,4 @@ Then open <http://127.0.0.1:4187/>.
 
 ## Deployment
 
-Upload the contents of this folder to the web root that should serve the site. For the current cPanel installation, the destination is `/public_html/lempoylabs`.
+The repository is configured for GitHub Pages through the `CNAME` file. Pushes to the publishing branch update <https://lempoylabs.com/> once GitHub Pages and DNS are active.
