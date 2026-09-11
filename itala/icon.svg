@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="iTala">
+  <rect width="512" height="512" rx="112" fill="#fffaf2"/>
+  <circle cx="251" cy="118" r="45" fill="#c75b72"/>
+  <path d="M202 187c0-13 11-24 24-24h70c13 0 24 11 24 24v210h42c12 0 22 10 22 22v2H145v-2c0-12 10-22 22-22h35V187z" fill="#c75b72"/>
+  <path d="M112 170l8 22 22 8-22 8-8 22-8-22-22-8 22-8 8-22zM388 110l10 27 27 10-27 10-10 27-10-27-27-10 27-10 10-27z" fill="#e7ad32"/>
+</svg>
