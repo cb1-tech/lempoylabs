@@ -148,12 +148,13 @@ function go(id){document.querySelectorAll('.view').forEach(x=>x.classList.toggle
 <script src="./journey-redesign.js?v=39"></script>
 <script src="./insights.js?v=39"></script>
 <script src="./history-redesign.js?v=39"></script>
-<script src="./settings-redesign.js?v=39"></script>
+<script src="./backup.js?v=40"></script>
+<script src="./settings-redesign.js?v=40"></script>
 <script>
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   let refreshingForUpdate=false;
   navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshingForUpdate){refreshingForUpdate=true;location.reload()}});
-  addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=39').then(registration=>registration.update()).catch(error => {
+  addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=40').then(registration=>registration.update()).catch(error => {
     console.warn('iTala offline support could not be enabled:', error);
   }));
 }
