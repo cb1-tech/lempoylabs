@@ -80,11 +80,36 @@ await evaluate("closeModal(); document.querySelector('.shell')?.classList.remove
 await screenshot("itala-today.png");
 await evaluate("go('journey');");
 await screenshot("itala-journey.png");
+await evaluate("go('reminders');");
+await screenshot("itala-reminders.png");
 
 await navigate("https://tarangeeta.com/");
 await screenshot("tarangeeta-home.png");
 await navigate("https://tarangeeta.com/products/");
 await screenshot("tarangeeta-products.png");
+await command("Emulation.setDeviceMetricsOverride", {
+  width: 390,
+  height: 520,
+  deviceScaleFactor: 1.5,
+  mobile: true,
+});
+await wait(800);
+await screenshot("tarangeeta-feature.png");
+await evaluate("window.scrollTo({ top: 1180, behavior: 'instant' });");
+await screenshot("tarangeeta-collection.png");
+
+await command("Emulation.setDeviceMetricsOverride", {
+  width: 1440,
+  height: 900,
+  deviceScaleFactor: 1,
+  mobile: false,
+});
+await navigate("https://tarangeeta.com/");
+await screenshot("tarangeeta-desktop.png");
+await navigate("https://tarangeeta.com/products/");
+await screenshot("tarangeeta-products-desktop.png");
+await evaluate("window.scrollTo({ top: 760, behavior: 'instant' });");
+await screenshot("tarangeeta-collection-desktop.png");
 
 socket.close();
 chrome.kill();
