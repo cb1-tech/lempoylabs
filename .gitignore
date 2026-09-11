@@ -2,3 +2,5 @@
 Thumbs.db
 *.zip
 cpanel-redirect/
+.capture-profile/
+__pycache__/
