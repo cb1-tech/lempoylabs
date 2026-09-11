@@ -14,11 +14,14 @@ async function importITalaBackup(input){
   try{
     const payload=JSON.parse(await file.text()),incoming=payload?.data??payload;
     if(incoming?.version!==2||!Array.isArray(incoming.profiles)||!incoming.profiles.length)throw new Error('Invalid iTala backup');
-    if(!confirm('Import this backup and replace the iTala data currently stored on this domain?'))return;
+    const count=incoming.profiles.length;
+    if(!confirm(`Import ${count} iTala profile${count===1?'':'s'} and replace any data currently stored on this domain?`))return;
     localStorage.setItem(KEY,JSON.stringify(incoming));
     const requested=payload?.activeProfileId;
     localStorage.setItem(ACTIVE_KEY,incoming.profiles.some(p=>p.id===requested)?requested:incoming.profiles[0].id);
+    if(!localStorage.getItem(KEY))throw new Error('Backup could not be saved');
+    alert(`Backup imported successfully. ${count} profile${count===1?' was':'s were'} restored.`);
     location.reload();
-  }catch(error){toast('That file is not a valid iTala backup');}
+  }catch(error){alert('The backup could not be imported. Please select the iTala JSON backup file you downloaded.');}
   finally{input.value='';}
 }
