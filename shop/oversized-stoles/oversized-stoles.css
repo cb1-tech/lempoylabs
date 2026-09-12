@@ -1,0 +1,4 @@
+.oversized-page .saree-hero h1{max-width:1080px;font-size:clamp(54px,7.2vw,102px)}
+.oversized-page .inline-care-link{color:var(--navy);font-weight:700;border-bottom:1px solid var(--blue)}
+.oversized-page .saree-page-links{align-items:flex-end}
+@media(max-width:760px){.oversized-page .saree-hero h1{font-size:clamp(42px,12vw,62px);line-height:.94}.oversized-page .saree-page-links{display:block}}
