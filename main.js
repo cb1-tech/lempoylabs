@@ -21,22 +21,3 @@ if (support && config.supportUrl) {
 document.querySelectorAll(".mobile-menu a").forEach((link) => {
   link.addEventListener("click", () => link.closest("details")?.removeAttribute("open"));
 });
-
-const showcaseMain = document.querySelector("#showcase-main-image");
-const showcaseFrame = showcaseMain?.closest(".showcase-main");
-const showcaseThumbs = document.querySelectorAll("[data-showcase-src]");
-
-showcaseThumbs.forEach((thumb) => {
-  thumb.addEventListener("click", () => {
-    if (!showcaseMain) return;
-    showcaseMain.src = thumb.dataset.showcaseSrc;
-    showcaseMain.alt = thumb.dataset.showcaseAlt || "";
-    showcaseFrame?.classList.toggle("is-torn", thumb.dataset.showcaseStyle === "torn");
-    showcaseThumbs.forEach((item) => {
-      const active = item === thumb;
-      item.classList.toggle("is-active", active);
-      if (active) item.setAttribute("aria-pressed", "true");
-      else item.removeAttribute("aria-pressed");
-    });
-  });
-});
