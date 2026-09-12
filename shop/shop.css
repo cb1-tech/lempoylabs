@@ -49,7 +49,7 @@
 .japan-finds{scroll-margin-top:110px;padding:96px 0;border-top:1px solid var(--navy);border-bottom:1px solid var(--navy)}
 .japan-finds-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);column-gap:clamp(54px,8vw,108px);align-items:start;margin-bottom:62px}
 .japan-finds-intro .eyebrow{grid-column:1/-1;margin-bottom:25px}
-.japan-finds-intro h2{grid-column:1;margin:0;font-size:clamp(48px,6vw,78px);line-height:.95;letter-spacing:-.055em;text-transform:uppercase}
+.japan-finds-intro h1,.japan-finds-intro h2{grid-column:1;margin:0;font-size:clamp(48px,6vw,78px);line-height:.95;letter-spacing:-.055em;text-transform:uppercase}
 .japan-finds-subtitle{grid-column:1;margin:18px 0 0;color:var(--navy);font-size:clamp(19px,2vw,26px);font-weight:700;line-height:1.35;letter-spacing:-.025em}
 .japan-finds-intro>p:not(.eyebrow):not(.japan-finds-subtitle){grid-column:2;grid-row:2/span 2;margin:0;color:var(--soft);font-size:15px;line-height:1.8}
 .japan-finds-transparency{grid-column:1/-1;display:flex;align-items:baseline;gap:13px;margin-top:36px;padding-top:22px;border-top:1px solid var(--line);color:#546b84;font-size:12px;line-height:1.55}
@@ -60,7 +60,7 @@
 .japan-find-figure figcaption{margin-top:10px;color:#78899c;font-size:10px;line-height:1.5}
 .japan-find-content{padding-top:4px}
 .japan-find-label{margin:0 0 22px;color:#60758d;font-size:10px;font-weight:750;letter-spacing:.11em;text-transform:uppercase}
-.japan-find-content h3{max-width:680px;margin:0;font-size:clamp(36px,4.4vw,62px);line-height:1;letter-spacing:-.05em}
+.japan-find-content h2,.japan-find-content h3{max-width:680px;margin:0;font-size:clamp(36px,4.4vw,62px);line-height:1;letter-spacing:-.05em}
 .japan-find-variant{margin:16px 0 0;color:#405873;font-size:18px;font-weight:700}
 .japan-find-model{margin:9px 0 0;color:#708299;font-size:12px;font-weight:650;letter-spacing:.05em;text-transform:uppercase}
 .japan-find-price{margin:29px 0 35px;font-size:25px;font-weight:780}
@@ -68,15 +68,25 @@
 .japan-find-description{max-width:670px}
 .japan-find-description p,.japan-find-about p,.japan-find-details p{margin:0 0 18px;color:#52677f;font-size:14px;line-height:1.8}
 .japan-find-about{margin-top:34px;padding:23px 0 0;border-top:1px solid var(--line)}
-.japan-find-about h4,.japan-find-details h4{margin:0 0 15px;color:var(--navy);font-size:12px;font-weight:780;letter-spacing:.08em;text-transform:uppercase}
+.japan-find-about h3,.japan-find-about h4,.japan-find-details h3,.japan-find-details h4{margin:0 0 15px;color:var(--navy);font-size:12px;font-weight:780;letter-spacing:.08em;text-transform:uppercase}
 .japan-find-about p{max-width:650px;font-size:12px}
 .japan-find-details{grid-column:1/-1;display:grid;grid-template-columns:1.15fr repeat(3,1fr);gap:clamp(28px,4vw,58px);margin-top:4px;padding-top:45px;border-top:1px solid var(--line)}
 .japan-find-details section{min-width:0}
 .japan-find-specs{margin:0;padding:0;columns:2;column-gap:30px;list-style:none;color:#52677f;font-size:12px;line-height:1.55}
 .japan-find-specs li{break-inside:avoid;margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid rgba(11,36,71,.09)}
 .japan-find-details p{font-size:12px;line-height:1.7}
+.japan-finds--page .japan-finds-intro>p:not(.eyebrow):not(.japan-finds-subtitle){font-size:17px;line-height:1.78}
+.japan-finds--page .japan-finds-transparency{font-size:14px;line-height:1.65}
+.japan-finds--page .japan-find-figure figcaption{font-size:11px}
+.japan-finds--page .japan-find-label{font-size:11px}
+.japan-finds--page .japan-find-model{font-size:13px}
+.japan-finds--page .japan-find-description p{font-size:16px;line-height:1.82}
+.japan-finds--page .japan-find-about p{font-size:14px;line-height:1.78}
+.japan-finds--page .japan-find-about h3,.japan-finds--page .japan-find-details h3{font-size:13px}
+.japan-finds--page .japan-find-specs{font-size:14px;line-height:1.6}
+.japan-finds--page .japan-find-details p{font-size:14px;line-height:1.75}
 @media(max-width:980px){.japan-find-details{grid-template-columns:1fr 1fr}.japan-find-specs{columns:1}}
-@media(max-width:680px){.japan-finds{padding:68px 0}.japan-finds-intro{display:block;margin-bottom:46px}.japan-finds-intro h2{font-size:50px}.japan-finds-subtitle{margin-top:14px;font-size:21px}.japan-finds-intro>p:not(.eyebrow):not(.japan-finds-subtitle){margin-top:27px;font-size:14px;line-height:1.75}.japan-finds-transparency{display:block;margin-top:28px;padding-top:19px}.japan-finds-transparency strong,.japan-finds-transparency span{display:block}.japan-finds-transparency span{margin-top:6px}.japan-find-product{display:block}.japan-find-figure{margin-bottom:38px}.japan-find-content h3{font-size:39px}.japan-find-variant{font-size:17px}.japan-find-details{display:block;margin-top:42px;padding-top:35px}.japan-find-details section+section{margin-top:34px;padding-top:29px;border-top:1px solid var(--line)}}
+@media(max-width:680px){.japan-finds{padding:68px 0}.japan-finds-intro{display:block;margin-bottom:46px}.japan-finds-intro h1,.japan-finds-intro h2{font-size:50px}.japan-finds-subtitle{margin-top:14px;font-size:21px}.japan-finds-intro>p:not(.eyebrow):not(.japan-finds-subtitle){margin-top:27px;font-size:14px;line-height:1.75}.japan-finds--page .japan-finds-intro>p:not(.eyebrow):not(.japan-finds-subtitle){font-size:16px;line-height:1.78}.japan-finds-transparency{display:block;margin-top:28px;padding-top:19px}.japan-finds-transparency strong,.japan-finds-transparency span{display:block}.japan-finds-transparency span{margin-top:6px}.japan-find-product{display:block}.japan-find-figure{margin-bottom:38px}.japan-find-content h2,.japan-find-content h3{font-size:39px}.japan-find-variant{font-size:17px}.japan-find-details{display:block;margin-top:42px;padding-top:35px}.japan-find-details section+section{margin-top:34px;padding-top:29px;border-top:1px solid var(--line)}}
 .care-list{margin:24px 0 0;padding:0;list-style:none;color:#53677e;font-size:14px;line-height:1.75}.care-list li{position:relative;margin:0 0 12px;padding-left:17px}.care-list li:before{content:"•";position:absolute;left:0;color:#6f8297}
 .made-to-order{padding:92px 0 38px;border-top:1px solid var(--navy)}.made-to-order>.eyebrow{margin-bottom:34px}.made-to-order-grid,.saree-teaser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:clamp(56px,8vw,110px);max-width:1040px}.made-to-order h2,.made-to-order h3{margin:0 0 28px;letter-spacing:-.035em}.made-to-order h2{font-size:clamp(30px,3.2vw,44px);line-height:1.3}.made-to-order h3{font-size:25px;line-height:1.35}.made-to-order p{margin:0 0 19px;color:#53677e;font-size:14px;line-height:1.8}.made-to-order .made-to-order-lead{color:var(--navy);font-weight:700}.made-to-order-action{display:inline-flex;width:fit-content;flex-direction:column;margin:18px 0 58px;padding-bottom:4px;border-bottom:1px solid var(--blue);color:var(--navy);font-size:12px;font-weight:700;line-height:1.45}.made-to-order-action:hover,.made-to-order-action:focus-visible{color:var(--blue)}.saree-teaser{padding:48px 0 8px;border-top:1px solid var(--line)}.saree-teaser .saree-label{margin-bottom:9px;color:#60758d;font-size:10px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}.saree-teaser h3{font-size:22px}.saree-teaser .saree-price{color:var(--navy);font-weight:700}.policy-link-panel{display:flex;align-items:end;justify-content:space-between;gap:42px;margin-top:50px;padding:34px 0;border-top:1px solid var(--navy)}.policy-link-panel div,.policy-link-panel a{display:flex;flex-direction:column}.policy-link-panel div span{color:#6d8095;font-size:10px}.policy-link-panel strong{font-size:27px}.policy-link-panel a{align-items:flex-end;padding-bottom:4px;border-bottom:1px solid var(--blue);font-size:12px;font-weight:700}.policy-link-panel a span{white-space:nowrap}.policy-link-panel a:hover{color:var(--blue)}
 @media(max-width:680px){.made-to-order{padding:68px 0 28px}.made-to-order>.eyebrow{margin-bottom:26px}.made-to-order-grid,.saree-teaser{display:block}.made-to-order h2{font-size:31px}.made-to-order-grid>div+div,.saree-teaser>div+div{margin-top:44px;padding-top:37px;border-top:1px solid var(--line)}.made-to-order-action{margin-bottom:50px}.saree-teaser{padding-top:42px}.policy-link-panel{display:block;margin-top:35px;padding:29px 0}.policy-link-panel a{align-items:flex-start;width:fit-content;margin-top:24px}}
