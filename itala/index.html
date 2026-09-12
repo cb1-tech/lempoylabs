@@ -12,8 +12,27 @@
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="icon" href="./icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png" />
-  <title>iTala — Your journey, recorded.</title>
+  <title>iTala — Private Health &amp; Journey Tracker | Lempoy Labs</title>
+  <meta name="description" content="iTala is a private, local-first tracker for recording doses, weight progress, daily patterns and reminders, developed under Lempoy Labs." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://lempoylabs.com/itala/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lempoy Labs" />
+  <meta property="og:title" content="iTala — Private Health &amp; Journey Tracker | Lempoy Labs" />
+  <meta property="og:description" content="Record doses, weight progress, daily patterns and reminders privately with iTala, a local-first tracker developed under Lempoy Labs." />
+  <meta property="og:url" content="https://lempoylabs.com/itala/" />
+  <meta property="og:image" content="https://lempoylabs.com/itala/icon-512.png" />
+  <meta property="og:image:alt" content="iTala app icon" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="iTala — Private Health &amp; Journey Tracker | Lempoy Labs" />
+  <meta name="twitter:description" content="Record doses, weight progress, daily patterns and reminders privately with iTala, a local-first tracker developed under Lempoy Labs." />
+  <meta name="twitter:image" content="https://lempoylabs.com/itala/icon-512.png" />
+  <meta name="twitter:image:alt" content="iTala app icon" />
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://lempoylabs.com/itala/#app","name":"iTala","url":"https://lempoylabs.com/itala/","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"A private, local-first tracker for recording doses, weight progress, daily patterns and reminders.","publisher":{"@id":"https://lempoylabs.com/#organization"}},{"@type":"WebPage","@id":"https://lempoylabs.com/itala/#webpage","url":"https://lempoylabs.com/itala/","name":"iTala — Private Health & Journey Tracker | Lempoy Labs","isPartOf":{"@id":"https://lempoylabs.com/#website"},"mainEntity":{"@id":"https://lempoylabs.com/itala/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lempoy Labs","item":"https://lempoylabs.com/"},{"@type":"ListItem","position":2,"name":"iTala","item":"https://lempoylabs.com/itala/"}]}]}
+  </script>
   <style>
+    #journey>h2,#history>h2,#reminders>h2,#settings>h2{display:none}
     :root{--ink:#222523;--muted:#777973;--paper:#f6f3ef;--card:#fff;--accent:#8da788;--accent-dark:#5e755b;--accent-soft:#e6eee3;--sage:var(--accent);--sage2:var(--accent-soft);--peach:#f4cfbb;--lav:#dcd5ed;--blue:#c8ddea;--line:#ece9e3;--shadow:0 14px 38px rgba(51,55,49,.08);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:var(--ink);color-scheme:light}
     *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#f0ebe5,#faf8f5 55%,#e9eee7);min-height:100vh}.shell{max-width:430px;min-height:100vh;margin:auto;background:var(--paper);position:relative;box-shadow:0 0 60px rgba(30,30,30,.12);overflow:hidden}.shell.profileLocked .view,.shell.profileLocked .nav{visibility:hidden}.view{display:none;padding:24px 20px 112px;min-height:100vh}.view.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:.2;transform:translateY(4px)}}
     h1,h2,h3,p{margin:0}.eyebrow{font-size:13px;color:var(--muted);font-weight:650;letter-spacing:.04em}.brand{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}.brandmark{font-size:15px;font-weight:800;letter-spacing:-.02em}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-dark);font-weight:800}.profileButton{display:flex;align-items:center;gap:8px;border:0;background:none;color:var(--ink);padding:0;font:inherit}.profileButton .avatar{width:34px;height:34px;font-size:11px}.profileButton b{font-size:13px}.profileButton em{font-style:normal;color:var(--muted);font-size:11px}h1{font-size:31px;line-height:1.06;letter-spacing:-.045em;margin-bottom:7px}.sub{font-size:15px;color:var(--muted);line-height:1.5}.card{background:var(--card);border-radius:25px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.65)}
@@ -57,10 +76,10 @@
 </head>
 <body><main class="shell">
   <section id="today" class="view active"><div class="brand profileHeader"></div><div class="welcomeArt"><p class="scriptGreeting" id="greeting">Good morning!</p><h1>Your journey,<br>one day at a time.</h1><p class="sub">Dose, progress and daily patterns—recorded privately.</p></div><div id="todayContent"></div></section>
-  <section id="journey" class="view"><div class="brand profileHeader"></div><p class="eyebrow">YOUR PROGRESS</p><h1>My Mounjaro<br>Journey ✨</h1><div id="journeyContent"></div></section>
-  <section id="history" class="view"><div class="brand profileHeader"></div><p class="eyebrow">EVERY LITTLE WIN</p><h1>Your history</h1><p class="sub">All your check-ins, in one calm place.</p><div class="filters" id="filters"></div><div id="historyContent"></div><button class="addEntry" onclick="openChooser()" aria-label="Add entry">+</button></section>
-  <section id="reminders" class="view"><div class="brand profileHeader"></div><p class="eyebrow">A GENTLE NUDGE</p><h1>Reminders</h1><p class="sub">Simple prompts for the moments you choose.</p><div id="remindersContent"></div></section>
-  <section id="settings" class="view"><div class="brand profileHeader"></div><p class="eyebrow">MAKE IT YOURS</p><h1>Settings</h1><p class="sub">Your journey, goals and preferred units.</p><div id="settingsContent"></div></section>
+  <section id="journey" class="view"><div class="brand profileHeader"></div><p class="eyebrow">YOUR PROGRESS</p><h2>My Mounjaro<br>Journey ✨</h2><div id="journeyContent"></div></section>
+  <section id="history" class="view"><div class="brand profileHeader"></div><p class="eyebrow">EVERY LITTLE WIN</p><h2>Your history</h2><p class="sub">All your check-ins, in one calm place.</p><div class="filters" id="filters"></div><div id="historyContent"></div><button class="addEntry" onclick="openChooser()" aria-label="Add entry">+</button></section>
+  <section id="reminders" class="view"><div class="brand profileHeader"></div><p class="eyebrow">A GENTLE NUDGE</p><h2>Reminders</h2><p class="sub">Simple prompts for the moments you choose.</p><div id="remindersContent"></div></section>
+  <section id="settings" class="view"><div class="brand profileHeader"></div><p class="eyebrow">MAKE IT YOURS</p><h2>Settings</h2><p class="sub">Your journey, goals and preferred units.</p><div id="settingsContent"></div></section>
   <nav class="nav"><button class="active" data-view="today"><i data-lucide="house"></i>Today</button><button data-view="journey"><i data-lucide="chart-no-axes-combined"></i>Journey</button><button data-view="history"><i data-lucide="notebook-tabs"></i>History</button><button data-view="reminders"><i data-lucide="bell"></i>Alerts</button><button data-view="settings"><i data-lucide="settings"></i>Settings</button></nav>
 </main><div class="modalBack" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="handle"></div><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
 <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
@@ -154,7 +173,7 @@ function go(id){document.querySelectorAll('.view').forEach(x=>x.classList.toggle
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   let refreshingForUpdate=false;
   navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshingForUpdate){refreshingForUpdate=true;location.reload()}});
-  addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=42').then(registration=>registration.update()).catch(error => {
+  addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=43').then(registration=>registration.update()).catch(error => {
     console.warn('iTala offline support could not be enabled:', error);
   }));
 }
