@@ -1,0 +1,4 @@
+.kaftan-page .size-note{margin-top:28px!important;padding-top:22px;border-top:1px solid var(--line);color:var(--navy)!important;font-weight:650}
+.kaftan-page .inline-care-link{color:var(--navy);font-weight:700;border-bottom:1px solid var(--blue)}
+.kaftan-page .saree-page-links{align-items:flex-end}
+@media(max-width:760px){.kaftan-page .saree-page-links{display:block}}
