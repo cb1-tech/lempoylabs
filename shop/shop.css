@@ -98,4 +98,20 @@
 .shop-subnav>div>*+*{margin-left:20px;padding-left:20px;border-left:1px solid var(--line)}
 .shop-subnav>div>span[aria-current="page"]{color:var(--navy)}
 @media(max-width:680px){.shop-subnav>.shell{row-gap:10px;padding-top:15px;padding-bottom:15px}.shop-subnav a,.shop-subnav>div>span{font-size:10px}.shop-subnav>div>*+*{margin-left:12px;padding-left:12px}}
+
+.collaboration-hero{padding:clamp(72px,10vw,140px) 0 clamp(64px,9vw,124px);border-bottom:1px solid var(--line)}
+.collaboration-hero .eyebrow{margin-bottom:28px}
+.collaboration-hero h1{max-width:980px;margin:0;color:var(--navy);font-size:clamp(54px,8vw,112px);line-height:.9;letter-spacing:-.065em}
+.collaboration-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:clamp(42px,8vw,120px);align-items:start;padding:clamp(64px,9vw,120px) 0 clamp(90px,12vw,160px)}
+.collaboration-copy h2{margin:0 0 28px;color:var(--navy);font-size:clamp(30px,4vw,54px);line-height:1.05;letter-spacing:-.04em}
+.collaboration-copy p{max-width:700px;margin:0 0 20px;color:#526b85;font-size:clamp(17px,1.6vw,21px);line-height:1.75}
+.collaboration-copy>div{display:grid;gap:clamp(44px,6vw,78px)}
+.collaboration-copy [lang="ja"] h2{font-size:clamp(27px,3.3vw,46px);letter-spacing:-.025em;line-height:1.35}
+.collaboration-copy [lang="ja"] p{line-height:2}
+.collaboration-status{border-top:1px solid var(--line);padding-top:22px}
+.collaboration-status strong{display:block;margin-bottom:12px;color:var(--navy);font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+.collaboration-status p{font-size:15px;line-height:1.65}
+.collaboration-status [lang="ja"]{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.collaboration-status [lang="ja"] strong{letter-spacing:.08em}
+@media(max-width:760px){.collaboration-hero{padding:64px 0 72px}.collaboration-hero h1{font-size:clamp(46px,15vw,70px)}.collaboration-copy{grid-template-columns:1fr;gap:42px;padding:58px 0 90px}}
 .copy-product-link{display:inline-flex;align-items:center;gap:7px;margin-top:24px;padding:7px 0;border:0;border-bottom:1px solid rgba(7,27,59,.28);color:#60758d;background:transparent;font:inherit;font-size:10px;font-weight:700;line-height:1;cursor:pointer;transition:color .18s,border-color .18s}.copy-product-link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.copy-product-link:hover,.copy-product-link:focus-visible{color:var(--blue);border-color:var(--blue)}.copy-product-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px}.copy-product-link.is-copied{color:#34775b;border-color:#34775b}
