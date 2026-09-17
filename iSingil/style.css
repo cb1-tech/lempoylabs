@@ -6,3 +6,33 @@
 .brand{display:flex;align-items:center;gap:6px}.brand-mark{width:36px;height:36px}.brand-word{height:36px;width:135px;object-fit:contain}.setup-brand .brand,.empty>.brand{justify-content:center}.setup-brand .brand-mark,.empty>.brand .brand-mark{width:52px;height:52px}.setup-brand .brand-word,.empty>.brand .brand-word{height:52px;width:195px}.btn svg{width:18px;height:18px;flex-shrink:0}.bottom-nav b{display:flex;justify-content:center}.bottom-nav svg{width:24px;height:24px}.sidebar>a:not(.brand){display:flex;align-items:center;gap:12px}.sidebar svg{width:22px;height:22px}.sidebar .brand{padding:0;margin-left:0;margin-right:0}.menu-title{display:flex;align-items:center;gap:12px}.menu-title svg{width:23px;height:23px;flex-shrink:0}.menu-title{color:#213d58!important}
 
 .empty-icon svg{width:28px;height:28px}.invoice-paper td,.invoice-paper th{word-break:normal}.btn{transition:background .15s,border-color .15s}.btn:hover{border-color:#90afd4}.btn.primary:hover{background:#124eaf}.brand-word{display:block}
+
+/* Phone layouts: retain readable controls without iOS focus zoom. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.shell-content,.workspace,.panel,.wizard,.split>*,.form-grid>*,.two>*,.meta-grid>*,.page-head>*,.row>*,.metric{min-width:0}
+fieldset{min-inline-size:0}
+input,select,textarea{min-width:0;font-size:16px}
+@media screen and (max-width:849px){
+ .workspace{width:100%;padding:22px max(16px,env(safe-area-inset-right)) calc(100px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+ .topbar{padding:12px max(16px,env(safe-area-inset-right)) 12px max(16px,env(safe-area-inset-left));flex-wrap:wrap}
+ .topbar .brand{flex-shrink:0}.local-label{font-size:11px}
+ .panel{padding:16px}.page-head{gap:12px}.page-head h1{overflow-wrap:anywhere}
+ .actions{min-width:0;max-width:100%}.actions>*{flex-shrink:1;overflow-wrap:anywhere}
+ .section-head{flex-wrap:wrap}.row>*{max-width:100%;overflow-wrap:anywhere}
+ .metric{padding:14px}.metric strong{font-size:25px;overflow-wrap:anywhere}
+ .meta-grid,.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .menu a,.menu button{gap:10px;min-width:0;overflow-wrap:anywhere}.menu-title{min-width:0}
+ .filters label{min-width:min(130px,100%)}
+ .table-wrap{max-width:100%;overscroll-behavior-x:contain}
+ .dialog-body{padding:18px}.dialog-head button{flex-shrink:0}
+ dialog{max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 28px)}
+ .bottom-nav{padding-left:max(5px,env(safe-area-inset-left));padding-right:max(5px,env(safe-area-inset-right))}.bottom-nav a{min-width:0}
+ input[type=file]{font-size:16px}input[type=date],input[type=month]{appearance:none;-webkit-appearance:none;min-height:46px}
+ .invoice-paper{min-width:0;overflow-wrap:anywhere}.invoice-paper .row{gap:10px}
+}
+@media screen and (max-width:420px){
+ .topbar .brand-word{width:110px;height:30px}.topbar .brand-mark{width:30px;height:30px}
+ .two{grid-template-columns:minmax(0,1fr)}
+ .page-head>.actions{width:100%}.page-head>.actions>*{flex:1 1 auto}
+ .dialog-footer>.btn{flex:1 1 auto}
+}
