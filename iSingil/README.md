@@ -34,3 +34,6 @@ PDF-Lib 1.17.1 (MIT), @pdf-lib/fontkit 1.1.1 (MIT), JSZip 3.10.1 (MIT), Noto San
 ## Lempoy Labs hosting
 
 This app is published from the `iSingil/` folder at https://lempoylabs.com/iSingil/. All assets and PWA paths are relative to this folder. App source is public; billing records remain in the browser database and are not committed to Git. Records from the private Sites URL are separate because browser storage is origin-specific. To move them, export a full JSON backup there, then validate and restore it here.
+
+
+Invoice layout: A4 print and downloadable PDF share bilingual labels and saved snapshot values. Optional Subject and per-line Transaction date are available on invoices; Postal code is available in Settings → Invoice profiles. Older invoices use their service-period start when a line date was not stored. Shipping and discount are shown as zero: no separate adjustments or changes to tax rounding are introduced. Existing finalized issuer/bank snapshots remain unchanged.
