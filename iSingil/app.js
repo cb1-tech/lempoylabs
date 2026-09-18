@@ -1,8 +1,8 @@
-import {icon} from './icons.js';
-import * as D from './domain.js';
-import {openDB,read,mutate,restore,onChange} from './db.js';
-import {esc,download,csv,parseCSV,exportRows,backupEnvelope,validateBackup,backupName,invoiceHTML,invoicePDF,archive} from './io.js';
-import {views,editors,setupView} from './views.js';
+import {icon} from './icons.js?release=12';
+import * as D from './domain.js?release=12';
+import {openDB,read,mutate,restore,onChange} from './db.js?release=12';
+import {esc,download,csv,parseCSV,exportRows,backupEnvelope,validateBackup,backupName,invoiceHTML,invoicePDF,archive} from './io.js?release=12';
+import {views,editors,setupView} from './views.js?release=12';
 const app=document.querySelector('#app'),modal=document.querySelector('#modal');
 export let state,route,setupStep=0,invoiceDraft=null,calendarMode='agenda',calendarMonth=D.today().slice(0,7),currentReport=[];
 let busy=false,importPreview,restorePreview;

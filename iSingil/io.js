@@ -1,4 +1,4 @@
-import {VERSION,now,today,money,major,coverageStatus,status,get,validateState} from './domain.js';
+import {VERSION,now,today,money,major,coverageStatus,status,get,validateState} from './domain.js?release=12';
 export const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function download(data,name,type='application/octet-stream'){const url=URL.createObjectURL(data instanceof Blob?data:new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000)}
 export function csv(rows){if(!rows.length)return'';const keys=Object.keys(rows[0]);const cell=v=>'"'+String(v??'').replace(/^[=+@\t\r]/,"'$&").replace(/^-(?!\d+(\.\d+)?$)/,"'-").replace(/"/g,'""')+'"';return '\ufeff'+[keys.map(cell).join(','),...rows.map(r=>keys.map(k=>cell(r[k])).join(','))].join('\r\n')}
@@ -8,8 +8,8 @@ export async function checksum(text){return [...new Uint8Array(await crypto.subt
 export async function backupEnvelope(s){return {app:'iSingil',version:VERSION,schema:1,exportedAt:now(),checksum:await checksum(JSON.stringify(s)),data:s}}
 export async function validateBackup(text){let b;try{b=JSON.parse(text)}catch{throw Error('This file is not valid JSON.')}if(b.app!=='iSingil'||b.schema!==1||!b.exportedAt)throw Error('Unsupported backup.');if(await checksum(JSON.stringify(b.data))!==b.checksum)throw Error('Backup checksum does not match. File may be damaged.');validateState(b.data);return b}
 export const backupName=()=>`iSingil_Backup_${today()}_${new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date()).replace(':','')}.json`;
-export {labels,label,bankLines,invoiceHTML} from './invoice-template.js';
-import {renderInvoicePDF} from './invoice-template.js';
+export {labels,label,bankLines,invoiceHTML} from './invoice-template.js?release=12';
+import {renderInvoicePDF} from './invoice-template.js?release=12';
 let libs,fontBytes;
 function script(src){return new Promise((resolve,reject)=>{const el=document.createElement('script');el.src=src;el.onload=resolve;el.onerror=()=>reject(Error('Document tools could not load. Open the app online once to cache them.'));document.head.append(el)})}
 async function loadPDF(){if(window.PDFLib&&window.fontkit&&window.JSZip)libs=Promise.resolve();if(!libs)libs=Promise.all([script('./vendor/pdf-lib.min.js'),script('./vendor/fontkit.umd.min.js'),script('./vendor/jszip.min.js')]).catch(e=>{libs=null;throw e});await libs;if(!fontBytes){const r=await fetch('./vendor/NotoSansJP.ttf');if(!r.ok)throw Error('Invoice font could not load.');fontBytes=await r.arrayBuffer()}}
