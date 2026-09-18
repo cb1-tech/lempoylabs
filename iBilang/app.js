@@ -30,7 +30,7 @@ function shell(content, title = '') {
 }
 
 function welcome() {
-  return `<div class="app welcome"><div class="welcome-mark">iB</div><h1>iBilang</h1><h2>Know what you have.</h2><p>Simple inventory tracking for small businesses.</p><div class="notice">Your inventory stays on this device.</div><div class="spacer"></div><button class="btn primary full" data-action="onboard-business">Get Started</button><button class="btn secondary full" data-action="restore-start">Restore Backup</button><input id="restore-start-file" type="file" accept="application/json" hidden><footer>Created by Lempoy Labs</footer></div>`;
+  return `<div class="app welcome"><img class="welcome-mark" src="./icon-192.png" alt=""><h1>iBilang</h1><h2>Know what you have.</h2><p>Simple inventory tracking for small businesses.</p><div class="notice">Your inventory stays on this device.</div><div class="spacer"></div><button class="btn primary full" data-action="onboard-business">Get Started</button><button class="btn secondary full" data-action="restore-start">Restore Backup</button><input id="restore-start-file" type="file" accept="application/json" hidden><footer>Created by Lempoy Labs</footer></div>`;
 }
 
 function businessForm() {
