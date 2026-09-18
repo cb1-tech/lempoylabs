@@ -1,4 +1,4 @@
-import {money} from './domain.js?release=12';
+import {money} from './domain.js?release=13';
 
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const labels={title:['INVOICE','請求書'],number:['Invoice No.','請求書番号'],date:['Invoice Date','発行日'],due:['Due Date','支払期限'],bill:['Bill To','請求先'],issuer:['Issuer','発行者'],subject:['Subject','件名'],transaction:['Date','取引日'],description:['Description','品名・内容'],qty:['Qty','数量'],unit:['Unit','単位'],price:['Unit Price','単価'],amount:['Amount','金額'],subtotal:['Subtotal','小計'],shipping:['Shipping','送料'],discount:['Discount','値引き'],tax:['Tax','消費税'],total:['Total','合計'],payment:['Payment Details','お振込先'],options:['Payment Details','お振込先'],period:['Service period','対象期間'],note:['Notes','備考'],summary:['Invoice Amount','ご請求金額'],currency:['Currency','通貨'],registration:['Registration No.','登録番号'],notQualified:['Not a qualified invoice','適格請求書ではありません'],inclusive:['Unit prices include tax','単価は税込'],exclusive:['Unit prices exclude tax','単価は税抜'],continued:['Continued','続き']};

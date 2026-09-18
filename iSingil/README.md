@@ -39,3 +39,5 @@ This app is published from the `iSingil/` folder at https://lempoylabs.com/iSing
 Invoice layout: A4 print and downloadable PDF share bilingual labels and saved snapshot values. Optional Subject and per-line Transaction date are available on invoices; Postal code is available in Settings → Invoice profiles. Older invoices use their service-period start when a line date was not stored. Shipping and discount are shown as zero: no separate adjustments or changes to tax rounding are introduced. Existing finalized issuer/bank snapshots remain unchanged.
 
 New manual and recurring invoices include every active bank account in Settings, with its account currency. Archived accounts are excluded. Finalized invoices retain their original bank snapshots.
+
+The invoice Print button opens the same generated PDF used by Download PDF. Use the PDF viewer’s Print action (on iPhone, Share → Print). If a new tab is blocked, the print-ready PDF downloads instead.

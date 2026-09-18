@@ -1,4 +1,4 @@
-import {initial,validateState,audit,now,repairInvoiceIds} from './domain.js?release=12';
+import {initial,validateState,audit,now,repairInvoiceIds} from './domain.js?release=13';
 let db;const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('isingil-updates'):null;
 export function onChange(fn){if(channel)channel.onmessage=fn}
 export async function openDB(){db=await new Promise((resolve,reject)=>{const r=indexedDB.open('isingil-private-v1',1);r.onupgradeneeded=()=>r.result.createObjectStore('data');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.onblocked=()=>reject(Error('Close other iSingil tabs to update storage.'))});db.onversionchange=()=>db.close();return (await mutate(s=>repairInvoiceIds(s))).state}
