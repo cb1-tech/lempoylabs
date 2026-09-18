@@ -1,4 +1,4 @@
-const CACHE='isingil-v1.0.0-8';
+const CACHE='isingil-v1.0.0-9';
 self.skipWaiting();
 const FILES=['./','./index.html','./style.css','./app.js','./views.js','./icons.js','./assets/branding/isingil-app-icon.svg','./assets/branding/isingil-wordmark.svg','./domain.js','./db.js','./io.js','./invoice-template.js','./favicon.svg','./manifest.webmanifest','./icon-192.png','./icon-512.png','./vendor/pdf-lib.min.js','./vendor/fontkit.umd.min.js','./vendor/jszip.min.js','./vendor/NotoSansJP.ttf'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
